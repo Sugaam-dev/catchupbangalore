@@ -40,3 +40,19 @@ seeMoreButtons.forEach((button) => {
 backButton.onclick = function(){
     carousel.classList.remove('showDetail');
 }
+
+// auto rotate 
+let autoRotate = setInterval(() => {
+    showSlider('next');
+}, 5000);
+
+// Optional: Pause rotation on hover
+carousel.addEventListener('mouseenter', () => {
+    clearInterval(autoRotate);
+});
+
+carousel.addEventListener('mouseleave', () => {
+    autoRotate = setInterval(() => {
+        showSlider('next');
+    }, 5000);
+});
