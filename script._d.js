@@ -11,6 +11,16 @@ closeMenu.addEventListener('click', ()=>{
     navlinks.style.left = ("100%")
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('.nav-links .dropdown');
+    
+    if (window.innerWidth <= 768) {
+      dropdown.addEventListener('click', function(e) {
+        e.preventDefault();
+        dropdown.classList.toggle('active');
+      });
+    }
+  });
 
 
 

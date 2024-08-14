@@ -43,16 +43,6 @@ backButton.onclick = function(){
 
 // auto rotate 
 let autoRotate = setInterval(() => {
-    showSlider('next');
-}, 5000);
+    showSlider('nxt');
+}, 10000);
 
-// Optional: Pause rotation on hover
-carousel.addEventListener('mouseenter', () => {
-    clearInterval(autoRotate);
-});
-
-carousel.addEventListener('mouseleave', () => {
-    autoRotate = setInterval(() => {
-        showSlider('next');
-    }, 5000);
-});
