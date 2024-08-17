@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link href="style._d.css" rel="stylesheet" />
+    <style>
+      .slider-container {
+        width: 100%;
+        max-width: 1920px;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .slider-section {
+        margin-bottom: 20px; /* Space between each slider section */
+      }
+      
+
+      .slider-heading,.slider-heading1 {
+        font-size: 200px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: "Grey Qo", cursive;
+      }
+
+      .slider {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slider img {
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      button.prev,
+      button.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+
+      button.prev {
+        left: 10px;
+      }
+
+      button.next {
+        right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        button.prev,
+        button.next {
+          padding: 5px;
+        }
+        .slider-heading1{
+            margin-top: 60px;
+            font-size: 80px;
+        }
+        .slider-heading{
+            font-size: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <i class="fas fa-bars"></i>
+          <div class="logo">
+            <a href="index.html"
+              ><img src="images/logo1.jpg" alt="Logo" class="logo-image"
+            /></a>
+          </div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name">CATCHUP</span>
+              <i class="fas fa-times"></i>
+            </div>
+            <ul class="menus">
+              <li>
+                <a class="waves" href="index.html">
+                  <span style="--spell: 1">H</span>
+                  <span style="--spell: 2">o</span>
+                  <span style="--spell: 3">m</span>
+                  <span style="--spell: 4">e</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="events.html">
+                  <span style="--spell: 1">A</span>
+                  <span style="--spell: 2">b</span>
+                  <span style="--spell: 3">o</span>
+                  <span style="--spell: 4">u</span>
+                  <span style="--spell: 5">t</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="gallery.html">
+                  <span style="--spell: 1">G</span>
+                  <span style="--spell: 2">A</span>
+                  <span style="--spell: 3">L</span>
+                  <span style="--spell: 5">L</span>
+                  <span style="--spell: 6">E</span>
+                  <span style="--spell: 7">R</span>
+                  <span style="--spell: 8">Y</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="menu.html">
+                  <span style="--spell: 1">M</span>
+                  <span style="--spell: 2">E</span>
+                  <span style="--spell: 3">N</span>
+                  <span style="--spell: 4">u</span>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a class="waves" href="events.html">
+                  <span style="--spell: 1">E</span>
+                  <span style="--spell: 2">V</span>
+                  <span style="--spell: 3">E</span>
+                  <span style="--spell: 4">N</span>
+                  <span style="--spell: 5">T</span>
+                  <span style="--spell: 6">S</span>
+                </a>
+                <!-- <ul class="dropdown-content">
+                    <li><a href="#">Birthday Party</a></li>
+                    <li><a href="#">Wedding Reception</a></li>
+                    <li><a href="#">Corporate Events</a></li>
+                    <li><a href="#">Private Parties</a></li>
+                  </ul> -->
+              </li>
+
+              <li>
+                <a class="waves" href="#">
+                  <span style="--spell: 1">C</span>
+                  <span style="--spell: 2">o</span>
+                  <span style="--spell: 3">n</span>
+                  <span style="--spell: 4">t</span>
+                  <span style="--spell: 5">a</span>
+                  <span style="--spell: 6">c</span>
+                  <span style="--spell: 7">t</span>
+                  <span style="--spell: 8">-</span>
+                  <span style="--spell: 9">u</span>
+                  <span style="--spell: 10">s</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="slider-container">
+      <!-- Dance Floor Slider -->
+      <div class="slider-section">
+        <h2 class="slider-heading1">Dance Floor</h2>
+
+        <div class="slider dance-floor">
+          <div class="slider-wrapper">
+            <img src="images/gallery1.png" alt="Dance Floor 1" />
+            <img src="images/gallery2.png" alt="Dance Floor 2" />
+            <img src="images/gallery3.png" alt="Dance Floor 3" />
+            <img src="images/gallery4.png" alt="Dance Floor 4" />
+          </div>
+          <button class="prev" onclick="prevSlide('dance-floor')">
+            &#10094;
+          </button>
+          <button class="next" onclick="nextSlide('dance-floor')">
+            &#10095;
+          </button>
+        </div>
+      </div>
+
+      <!-- Second Floor Slider -->
+      <div class="slider-section">
+        <h2 class="slider-heading">Second Floor</h2>
+        <div class="slider second-floor">
+          <div class="slider-wrapper">
+            <img src="images/secondgallery1.png" alt="Second Floor 1" />
+            <img src="images/secondgallery2.png" alt="Second Floor 2" />
+            <img src="images/secondgallery3.png" alt="Second Floor 3" />
+            <img src="images/secondgallery4.png" alt="Second Floor 4" />
+          </div>
+          <button class="prev" onclick="prevSlide('second-floor')">
+            &#10094;
+          </button>
+          <button class="next" onclick="nextSlide('second-floor')">
+            &#10095;
+          </button>
+        </div>
+      </div>
+
+      <!-- Rooftop Slider -->
+      <div class="slider-section">
+        <h2 class="slider-heading">Rooftop</h2>
+        <div class="slider rooftop">
+          <div class="slider-wrapper">
+            <img src="images/thirdgallery1.png" alt="Rooftop 1" />
+            <img src="images/thirdgallery2.png" alt="Rooftop 2" />
+          </div>
+          <button class="prev" onclick="prevSlide('rooftop')">&#10094;</button>
+          <button class="next" onclick="nextSlide('rooftop')">&#10095;</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <img
+        src="images/Catch-Up_Logo_CMYK_page-0001-removebg-preview.png"
+        alt=""
+      />
+      <ul class="social_icon">
+        <li>
+          <a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-xing"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>@2024 All Rights Reserved Design by SUGAAM</p>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script._d.js"></script>
+    <script src="app.js"></script>
+    <script src="slide.js"></script>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+    </script>
+    <script>
+      // script.js
+
+      let currentIndex = {
+        "dance-floor": 0,
+        "second-floor": 0,
+        rooftop: 0,
+      };
+
+      const slideIntervals = {}; // To store intervals for each slider
+
+      function showSlide(sliderClass, index) {
+        const sliderWrapper = document.querySelector(
+          `.${sliderClass} .slider-wrapper`
+        );
+        const slides = sliderWrapper.children;
+        const totalSlides = slides.length;
+
+        currentIndex[sliderClass] = (index + totalSlides) % totalSlides;
+        sliderWrapper.style.transform = `translateX(-${
+          currentIndex[sliderClass] * 100
+        }%)`;
+      }
+
+      function prevSlide(sliderClass) {
+        showSlide(sliderClass, currentIndex[sliderClass] - 1);
+      }
+
+      function nextSlide(sliderClass) {
+        showSlide(sliderClass, currentIndex[sliderClass] + 1);
+      }
+
+      function startAutoSlide(sliderClass, intervalTime = 3000) {
+        slideIntervals[sliderClass] = setInterval(() => {
+          nextSlide(sliderClass);
+        }, intervalTime);
+      }
+
+      function stopAutoSlide(sliderClass) {
+        clearInterval(slideIntervals[sliderClass]);
+      }
+
+      // Start auto-slide for each slider
+      startAutoSlide("dance-floor");
+      startAutoSlide("second-floor");
+      startAutoSlide("rooftop");
+    </script>
+  </body>
+</html>
