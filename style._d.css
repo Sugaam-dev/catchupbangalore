@@ -80,7 +80,7 @@ nav .navbar .nav-links .menus li a {
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 25%;
+  border-radius: 55%;
 }
 /* Navbar for Index Page */
 .index-page nav {
@@ -88,7 +88,7 @@ nav .navbar .nav-links .menus li a {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0); /* transparent background */
   z-index: 100; /* Ensure it is above the video */
 }
 
