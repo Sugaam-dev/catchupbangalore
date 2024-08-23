@@ -1,171 +1,94 @@
+<!-- Inside index.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pub Event Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style._d.css" />
     <style>
-      /* Background Image */
-      .background-image {
-        background: url("images/about.jpg") no-repeat center center/cover;
-        height: 100%;
-        position: relative;
-      }
+      /* Inside style._d.css */
 
-      /* Content Section */
-      .content-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 50px;
-        min-height: 100vh;
-        position: relative;
-      }
+/* Book Now button styles */
+.book-now {
+  background-color: gold;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: blink 1.5s infinite;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-block;
+}
 
-      .content-section:nth-child(odd) .image-container {
-        order: 1;
-      }
+/* Blinking effect */
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
 
-      .content-section:nth-child(odd) .text-container {
-        order: 2;
-      }
+/* Magnifying effect on hover */
+.book-now:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); /* Soft glow effect */
+}
 
-      .content-section:nth-child(even) .text-container {
-        order: 1;
-      }
+/* Media query adjustments for smaller screens */
+@media (max-width: 888px) {
+  nav .navbar .nav-links .menus {
+    display: block;
+    margin-top: 20px;
+  }
 
-      .content-section:nth-child(even) .image-container {
-        order: 2;
-      }
+  nav .navbar .nav-links .menus li {
+    display: block;
+    line-height: 40px;
+  }
 
-      .image-container {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 50%;
-        position: relative;
-      }
+  .book-now {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
 
-      .image-container img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-      }
-
-      /* Text Container */
-      .text-container {
-        flex: 1;
-        background-color: rgba(51, 40, 33, 0.9); /* Dark brown with opacity */
-        color: #d8c3a5; /* Light color for contrast */
-        padding: 30px;
-        border-radius: 8px;
-        max-width: 500px;
-      }
-
-      .text-container h2 {
-        font-family: "Georgia", serif;
-        font-size: 36px;
-        margin-bottom: 20px;
-      }
-
-      .text-container p {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .content-section {
-          flex-direction: column;
-          text-align: center;
-          padding: 20px;
-        }
-
-        .image-container,
-        .text-container {
-          flex: none;
-          max-width: 100%;
-        }
-
-        .text-container {
-          margin-top: 20px;
-        }
-      }
     </style>
+    <title>Navbar Wave | version-D</title>
   </head>
   <body>
-    <!-- Header Section -->
     <header>
-      <h1>Your Pub Name</h1>
+      <nav>
+        <div class="navbar">
+          <i class="fas fa-bars"></i>
+          <div class="logo"><a href="#">Navbar-D</a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name">Navbar-D</span>
+              <i class="fas fa-times"></i>
+            </div>
+            <ul class="menus">
+              <li><a class="waves" href="#">Home</a></li>
+              <li><a class="waves" href="#">About</a></li>
+              <li><a class="waves" href="#">Services</a></li>
+              <li><a class="waves" href="#">Contact-us</a></li>
+              <!-- New Book Now Button -->
+              <li><a class="book-now" href="contact.html">Book Now</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-
-    <!-- Main Content -->
-    <div class="background-image">
-      <section class="content-section">
-        <div class="image-container hexagon">
-          <img src="images/salad.png" alt="Buffet Image" />
-        </div>
-        <div class="text-container">
-          <h2>BUFFETS</h2>
-          <p>
-            If you are a foodie of the next level who also loves drinking, then
-            LEVELS is the ultimate place for YOU! Our buffets serve a vast
-            variety of appetizing cuisines and, of course, DRINKS! All you can
-            eat and all you can drink. Bottoms Up!
-          </p>
-        </div>
-      </section>
-      <section class="content-section">
-        <div class="image-container hexagon">
-          <img src="images/salad.png" alt="Buffet Image" />
-        </div>
-        <div class="text-container">
-          <h2>BUFFETS</h2>
-          <p>
-            If you are a foodie of the next level who also loves drinking, then
-            LEVELS is the ultimate place for YOU! Our buffets serve a vast
-            variety of appetizing cuisines and, of course, DRINKS! All you can
-            eat and all you can drink. Bottoms Up!
-          </p>
-        </div>
-      </section>
-      <section class="content-section">
-        <div class="image-container hexagon">
-          <img src="images/barbeq.png" alt="Buffet Image" />
-        </div>
-        <div class="text-container">
-          <h2>BUFFETS</h2>
-          <p>
-            If you are a foodie of the next level who also loves drinking, then
-            LEVELS is the ultimate place for YOU! Our buffets serve a vast
-            variety of appetizing cuisines and, of course, DRINKS! All you can
-            eat and all you can drink. Bottoms Up!
-          </p>
-        </div>
-      </section>
-      <section class="content-section">
-        <div class="image-container hexagon">
-          <img src="images/salad.png" alt="Buffet Image" />
-        </div>
-        <div class="text-container">
-          <h2>BUFFETS</h2>
-          <p>
-            If you are a foodie of the next level who also loves drinking, then
-            LEVELS is the ultimate place for YOU! Our buffets serve a vast
-            variety of appetizing cuisines and, of course, DRINKS! All you can
-            eat and all you can drink. Bottoms Up!
-          </p>
-        </div>
-      </section>
-      <!-- Additional sections can be added below -->
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-      <p>&copy; 2024 Your Pub Name. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="script._d.js"></script>
   </body>
 </html>

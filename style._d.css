@@ -190,6 +190,44 @@ nav .navbar .nav-links .sidebar-logo .fa-times {
     display: block;
     line-height: 40px;
   }
+  .book-now {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+/* book now button */
+.book-now {
+  background-color: gold; /* Solid background color */
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: blink 1.5s infinite;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  background-image: none; /* Remove any inherited background images */
+  background-clip: border-box; /* Ensures the background is not transparent */
+  border: 2px solid gold; /* Adds a border to clearly define the button */
+}
+
+/* Blinking effect */
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.5;
+  }
+}
+
+/* Magnifying effect on hover */
+.book-now:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.6); /* Soft glow effect */
 }
 
 /* footeer */
