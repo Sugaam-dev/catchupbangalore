@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catchup</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Hero Section */
+      .hero {
+        background-image: url("images/pexels-maumascaro-376533.jpg"); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-logo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #000;
+        border: 5px solid #000;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Main Content */
+      .content {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+
+      .content h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .content p {
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 40px;
+      }
+
+      /* Responsive Image Grid */
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+        gap: 10px;
+        margin-bottom: 40px;
+      }
+
+      .grid-item img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+        object-fit: contain;
+      }
+
+      .grid-item:hover img {
+        transform: scale(1.05);
+      }
+
+      /* Social Media Links */
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .social-links img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s ease;
+      }
+
+      .social-links img:hover {
+        transform: scale(1.1);
+      }
+
+      /* Grid Items */
+      .grid-item {
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+      }
+
+      .grid-item.large {
+        grid-column: span 2; /* Spans two columns on larger screens */
+      }
+
+      .grid-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        /* Adjust hero section */
+        .hero {
+          height: 200px;
+        }
+
+        .hero-logo {
+          width: 90px;
+          height: 90px;
+        }
+
+        .content h1 {
+          font-size: 2em;
+        }
+
+        .content p {
+          font-size: 0.9em;
+        }
+
+        /* Responsive Image Grid for smaller screens */
+        .image-grid {
+          grid-template-columns: repeat(2,1fr); /* Single column on small screens */
+        }
+
+        .grid-item.large {
+          grid-column: span 1; /* Ensure large items span one column on small screens */
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        /* For medium screens, show two columns in image-grid */
+        .image-grid {
+          grid-template-columns: repeat(
+            2,
+            1fr
+          ); /* Two columns on medium screens */
+        }
+        
+      }
+      /* Tab Section */
+.tabs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns grid */
+    gap: 20px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+/* Tab styling with uneven sizes */
+.tab {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Ensure that images fit perfectly within their containers */
+.tab img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Maintains aspect ratio while fitting the container */
+    transition: transform 0.3s ease;
+    padding: 10px; /* Adds padding to prevent stretching */
+    background-color: white; /* Optional: Adds background color to enhance visibility */
+}
+
+/* Hover effect */
+.tab:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Overlay styling */
+.tab .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Different sizes for tabs */
+.tab:nth-child(1) {
+    grid-column: span 2; /* Spans two columns */
+    height: 300px; /* Custom height */
+}
+
+.tab:nth-child(2) {
+    grid-column: span 1;
+    height: 300px;
+}
+
+.tab:nth-child(3) {
+    grid-column: span 1;
+    height: 250px;
+}
+
+.tab:nth-child(4) {
+    grid-column: span 2;
+    height: 350px;
+}
+
+.tab:nth-child(5) {
+    grid-column: span 1;
+    height: 450px;
+}
+
+.tab:nth-child(6) {
+    grid-column: span 1;
+    height: 200px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .tabs-container {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .tab {
+        height: auto; /* Adjust height automatically */
+    }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/logo.jpg" alt="Catchup  Logo" class="hero-logo" />
+    </section>
+
+    <!-- Main Content -->
+    <section class="content">
+      <h1>Catchup</h1>
+      <p>
+        Catchup , NESTLED IN THE VIBRANT HEART OF KORAMANGALA, OFFERS A DYNAMIC
+        FUSION OF CULINARY DELIGHTS AND ENTERTAINMENT. WITH LIVE MUSIC TO
+        SERENADE YOUR SENSES, LIVELY KARAOKE NIGHTS FOR THE INNER DIVA OR
+        ROCKSTAR IN YOU, PULSATING DJ EVENTS TO KEEP THE PARTY ALIVE, AND A
+        SPACIOUS DANCE FLOOR BECKONING YOU TO GROOVE TO THE RHYTHM OF THE NIGHT.
+        THERE’S NEVER A DULL MOMENT AT Catchup . PLUS, INDULGE IN AN IMMERSIVE
+        EXPERIENCE WITH OUR LED SCREEN, ENHANCING EVERY BEAT AND NOTE. JOIN US
+        FOR AN UNFORGETTABLE EVENING OF FOOD, DRINKS, AND ENDLESS FUN!
+      </p>
+
+      <!-- Responsive Image Grid -->
+      <div class="image-grid">
+        <a href="https://www.instagram.com/yourpage/" class="grid-item">
+          <img src="images/pexels-maumascaro-376533.jpg" alt="Image 1" />
+        </a>
+        <a href="https://www.instagram.com/yourpage/" class="grid-item">
+          <img src="images/pexels-ogutomacedo-10548498.jpg" alt="Image 2" />
+        </a>
+        <a href="https://www.instagram.com/yourpage/" class="grid-item">
+          <img src="images/pexels-mediocrememories-2240763.jpg" alt="Image 3" />
+        </a>
+        <a href="https://www.instagram.com/yourpage/" class="grid-item">
+          <img src="images/pexels-maumascaro-801863.jpg" alt="Image 4" />
+        </a>
+        <a href="https://www.instagram.com/yourpage/" class="grid-item">
+          <img src="images/pexels-ogutomacedo-10548498.jpg" alt="Image 5" />
+        </a>
+        <a href="https://www.instagram.com/yourpage/" class="grid-item">
+          <img src="images/pexels-mediocrememories-2240763.jpg" alt="Image 6" />
+        </a>
+      </div>
+
+      <!-- Social Media Links -->
+      <div class="social-links">
+        <a href="https://wa.me/yourwhatsappnumber"
+          ><img src="images/icons8-whatsapp-50.png" alt="WhatsApp"
+        /></a>
+        <a href="https://www.instagram.com/yourpage/"
+          ><img src="images/icons8-instagram-50.png" alt="Instagram"
+        /></a>
+        <a href="mailto:youremail@example.com"
+          ><img src="images/icons8-mail-50.png" alt="Email"
+        /></a>
+        <a href="https://www.facebook.com/yourpage"
+          ><img src="images/icons8-facebook-50.png" alt="Facebook"
+        /></a>
+      </div>
+    </section>
+    <!-- Tab Section -->
+<section class="tabs-container">
+  <a href="https://maps.google.com" class="tab">
+      <img src="images/icons8-navigation-96.png" alt="Google Tab">
+      <div class="overlay">GOOGLE</div>
+  </a>
+  <a href="https://www.whatsapp.com" class="tab">
+      <img src="images/icons8-whatsapp-128.png" alt="WhatsApp Channel">
+      <div class="overlay">WHATSAPP CHANNEL</div>
+  </a>
+  <a href="https://www.zomato.com" class="tab">
+      <img src="images/vecteezy_zomato-logo-vector-zomato-icon-free-vector_20336052.jpg" alt="Zomato Tab">
+      <div class="overlay">ZOMATO</div>
+  </a>
+  <a href="https://www.example.com/fnb-menu" class="tab">
+      <img src="images/icons8-book-96.png" alt="FnB Menu">
+      <div class="overlay">FnB MENU</div>
+  </a>
+  <a href="https://www.example.com/party-package" class="tab">
+      <img src="images/icons8-gift-100.png" alt="Party Package">
+      <div class="overlay">PARTY PACKAGE</div>
+  </a>
+  <a href="https://www.example.com/fnb-images" class="tab">
+      <img src="images/icons8-party-popper-100.png" alt="F&B Images">
+      <div class="overlay">F&B IMAGES</div>
+  </a>
+</section>
+  </body>
+</html>
