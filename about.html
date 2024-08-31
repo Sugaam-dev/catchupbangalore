@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ABOUT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,11 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
@@ -18,135 +23,255 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    
-    <link href="style._d.css" rel="stylesheet"/>
-</head>
-<body>
+
+    <link href="style._d.css" rel="stylesheet" />
+    <style>
+      .content {
+        display: flex;
+        justify-content:center ;
+        text-align: center;
+        color: aliceblue;
+        padding: 20px;
+        margin-top: 20px ;
+        background-color: #000;
+      }
+      .content1 {
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        padding: 20px;
+        margin: 0;
+        color: white;
+      }
+
+      .content p {
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 20px 0 ;
+        
+      }
+      .content1 p{
+        font-size: 18px;
+        line-height: 1.6;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .content-heading {
+        font-size: 200px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #fff;
+        font-family: "Grey Qo", cursive;
+        text-decoration: underline;
+      }
+      @media (max-width: 768px) {
+        .content-heading {
+          font-size: 80px;
+        }
+      }
+      .our-story__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        padding: 20px;
+      }
+
+      .our-story__image img {
+        width: 50%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
     <header>
-        <nav>
-          <div class="navbar">
-            <i class="fas fa-bars"></i>
-            <div class="logo"><a href="index.html"><img src="images/logo1.png" alt="Logo" class="logo-image"></a></div>
-            <div class="nav-links">
-              <div class="sidebar-logo">
-                <span class="logo-name">CATCHUP</span>
-                <i class="fas fa-times"></i>
-              </div>
-              <ul class="menus">
-                <li>
-                  <a class="waves" href="index.html">
-                    <span style="--spell: 1">H</span>
-                    <span style="--spell: 2">o</span>
-                    <span style="--spell: 3">m</span>
-                    <span style="--spell: 4">e</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="waves" href="events.html">
-                    <span style="--spell: 1">A</span>
-                    <span style="--spell: 2">b</span>
-                    <span style="--spell: 3">o</span>
-                    <span style="--spell: 4">u</span>
-                    <span style="--spell: 5">t</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="waves" href="gallery.html">
-                    <span style="--spell: 1">G</span>
-                    <span style="--spell: 2">A</span>
-                    <span style="--spell: 3">L</span>                    
-                    <span style="--spell: 5">L</span>
-                    <span style="--spell: 6">E</span>
-                    <span style="--spell: 7">R</span>
-                    <span style="--spell: 8">Y</span>
-                    
-                  </a>
-                 </li>
-                <li>
-                  <a class="waves" href="menu.html">
-                    <span style="--spell: 1">M</span>
-                    <span style="--spell: 2">E</span>
-                    <span style="--spell: 3">N</span>
-                    <span style="--spell: 4">u</span>                    
-                  </a>
-                </li>
-                <li>
-                  <a class="waves" href="events.html">
-                    <span style="--spell: 1">E</span>
-                    <span style="--spell: 2">V</span>
-                    <span style="--spell: 3">E</span>
-                    <span style="--spell: 4">N</span>
-                    <span style="--spell: 5">T</span>
-                    <span style="--spell: 6">S</span>                    
-                  </a>
-                  <!-- <ul class="dropdown-content">
+      <nav>
+        <div class="navbar">
+          <i class="fas fa-bars"></i>
+          <div class="logo">
+            <a href="index.html"
+              ><img src="images/logo1.png" alt="Logo" class="logo-image"
+            /></a>
+          </div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name">CATCHUP</span>
+              <i class="fas fa-times"></i>
+            </div>
+            <ul class="menus">
+              <li>
+                <a class="waves" href="index.html">
+                  <span style="--spell: 1">H</span>
+                  <span style="--spell: 2">o</span>
+                  <span style="--spell: 3">m</span>
+                  <span style="--spell: 4">e</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="events.html">
+                  <span style="--spell: 1">A</span>
+                  <span style="--spell: 2">b</span>
+                  <span style="--spell: 3">o</span>
+                  <span style="--spell: 4">u</span>
+                  <span style="--spell: 5">t</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="gallery.html">
+                  <span style="--spell: 1">G</span>
+                  <span style="--spell: 2">A</span>
+                  <span style="--spell: 3">L</span>
+                  <span style="--spell: 5">L</span>
+                  <span style="--spell: 6">E</span>
+                  <span style="--spell: 7">R</span>
+                  <span style="--spell: 8">Y</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="menu.html">
+                  <span style="--spell: 1">M</span>
+                  <span style="--spell: 2">E</span>
+                  <span style="--spell: 3">N</span>
+                  <span style="--spell: 4">u</span>
+                </a>
+              </li>
+              <li>
+                <a class="waves" href="events.html">
+                  <span style="--spell: 1">E</span>
+                  <span style="--spell: 2">V</span>
+                  <span style="--spell: 3">E</span>
+                  <span style="--spell: 4">N</span>
+                  <span style="--spell: 5">T</span>
+                  <span style="--spell: 6">S</span>
+                </a>
+                <!-- <ul class="dropdown-content">
                     <li><a href="#">Birthday Party</a></li>
                     <li><a href="#">Wedding Reception</a></li>
                     <li><a href="#">Corporate Events</a></li>
                     <li><a href="#">Private Parties</a></li>
                   </ul> -->
-                </li>
-  
-                <li>
-                  <a class="waves" href="contact.html">
-                    <span style="--spell: 1">C</span>
-                    <span style="--spell: 2">o</span>
-                    <span style="--spell: 3">n</span>
-                    <span style="--spell: 4">t</span>
-                    <span style="--spell: 5">a</span>
-                    <span style="--spell: 6">c</span>
-                    <span style="--spell: 7">t</span>
-                    <span style="--spell: 8">-</span>
-                    <span style="--spell: 9">u</span>
-                    <span style="--spell: 10">s</span>
-                  </a>
-                </li>
-                <li><a class="book-now" href="contact.html">Book Now</a></li>
-              </ul>
-            </div>
+              </li>
+
+              <li>
+                <a class="waves" href="contact.html">
+                  <span style="--spell: 1">C</span>
+                  <span style="--spell: 2">o</span>
+                  <span style="--spell: 3">n</span>
+                  <span style="--spell: 4">t</span>
+                  <span style="--spell: 5">a</span>
+                  <span style="--spell: 6">c</span>
+                  <span style="--spell: 7">t</span>
+                  <span style="--spell: 8">-</span>
+                  <span style="--spell: 9">u</span>
+                  <span style="--spell: 10">s</span>
+                </a>
+              </li>
+              <li><a class="book-now" href="contact.html">Book Now</a></li>
+            </ul>
           </div>
-        </nav>
-      </header><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer>
-        <div class="waves">
-            <div class="wave" id="wave1"></div>
-            <div class="wave" id="wave2"></div>
-            <div class="wave" id="wave3"></div>
-            <div class="wave" id="wave4"></div>
         </div>
-        <img src="images/Catch-Up_Logo_CMYK_page-0001-removebg-preview.png" alt="">
-        <ul class="social_icon">
-            <li><a href="#" title="fb">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a></li>
-            <li><a href="#" title="x">
-                    <ion-icon name="logo-xing"></ion-icon>
-                </a></li>
-            <li><a href="#" title="linkedin">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a></li>
-            <li><a href="#" title="instagram">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a></li>
-        </ul>
-        <ul class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <p>@<span id="year"></span> All Rights Reserved Design by SUGAAM</p>
+      </nav>
+    </header>
+    <br /><br /><br />
+    <h2 class="content-heading">About Us</h2>
+    <div class="content">
+      <p>
+        Catch Up Bangalore, located in the vibrant HSR Layout Sector 6, is a
+        popular dining spot known for its eclectic menu featuring a mix of
+        Chinese, North Indian, and Continental cuisines. The restaurant offers a
+        contemporary dining experience with a warm and stylish ambiance, making
+        it an ideal place for both casual lunches and romantic dinners. Catch Up
+        has been serving the Bangalore community for several years, becoming a
+        favorite spot for locals and visitors alike due to its unique fusion
+        dishes and excellent service. The restaurant is especially praised for
+        its diverse menu, which includes everything from classic North Indian
+        curries to flavorful Asian-inspired dishes. In addition to its regular
+        dining services, Catch Up also provides a takeaway option, catering to
+        the busy urban crowd who prefer enjoying their meals at home. The
+        interior of the restaurant is designed to be cozy yet modern, making it
+        a comfortable space to relax and enjoy a meal with friends or family.
+      </p>
+    </div>
+    <div class="our-story__image">
+      <img
+        src="images/Catch-Up_Logo_CMYK_page-0001.jpg"
+        alt="Our Story Image"
+      />
+    </div>
+    <div class="content1">
+      <p>
+      Catch Up is making an exciting comeback in HSR Layout, Bangalore, with an
+      all-new experience featuring a Brew House Pub, a Fine Dine section, and a
+      Rooftop Lounge. After the challenges of the pandemic, this beloved spot is
+      set to become a go-to destination for great food, drinks, and vibrant
+      ambiance. With a fresh vibe, innovative menus, and stunning rooftop views,
+      Catch Up promises to offer a perfect blend of relaxation and
+      entertainment, making it a must-visit for those looking to unwind and
+      socialize in style. Don't miss out on this rejuvenated hotspot that’s
+      ready to redefine your dining and nightlife experience in Bangalore!</p>
+    </div>
+    <br /><br /><br /><br /><br />
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <img
+        src="images/Catch-Up_Logo_CMYK_page-0001-removebg-preview.png"
+        alt=""
+      />
+      <ul class="social_icon">
+        <li>
+          <a href="#" title="fb">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="x">
+            <ion-icon name="logo-xing"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="linkedin">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="#" title="instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p>@<span id="year"></span> All Rights Reserved Design by SUGAAM</p>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      <script src="script._d.js"></script>
-      <script src="app.js"></script>
-      <script src="slide.js"></script>
-        <script type="text/javascript">
-          const toggleMenu = () => {
-            document.body.classList.toggle("open");
-          };
-        </script>
-</body>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script._d.js"></script>
+    <script src="app.js"></script>
+    <script src="slide.js"></script>
+    <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+    </script>
+  </body>
 </html>
