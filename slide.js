@@ -11,7 +11,7 @@ let autoRotate;
 const startAutoRotate = () => {
     autoRotate = setInterval(() => {
         showSlider('nxt');
-    }, 5000); // Adjust the timing as necessary
+    }, 3000); // Adjust the timing as necessary
 };
 
 // Function to stop auto-rotation

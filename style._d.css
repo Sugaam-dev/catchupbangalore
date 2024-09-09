@@ -349,23 +349,24 @@ footer .wave#wave4 {
   }
 }
 /* Dropdown menu */
-/* .nav-links .dropdown {
+.nav-links .dropdown {
   position: relative;
-} */
+}
 
-/* .nav-links .dropdown .dropdown-content {
+.nav-links .dropdown .dropdown-content {
   display: none;
   position: absolute;
   background-color: #000;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: 100%; Adjust to place the dropdown below the Services link */
-  /* left: 0; /* Align with the Services link *
-} */
+  top: 100%; /*Adjust to place the dropdown below the Services link */
+   left: 0; /* Align with the Services link */
+   
+}
 
-/* .nav-links .dropdown .dropdown-content li {
-  list-style: none;
+.nav-links .dropdown .dropdown-content li {
+  list-style: none;  
 }
 
 .nav-links .dropdown .dropdown-content li a {
@@ -377,15 +378,15 @@ footer .wave#wave4 {
 
 .nav-links .dropdown .dropdown-content li a:hover {
   background-color: #000;
-} */
+}
 
 /* Show the dropdown menu on hover */
-/* .nav-links .dropdown:hover .dropdown-content {
+.nav-links .dropdown:hover .dropdown-content {
   display: block;
-} */
+}
 
 /* For smaller devices, show dropdown when clicked */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .nav-links .dropdown .dropdown-content {
     position: relative;
     box-shadow: none;
@@ -394,4 +395,4 @@ footer .wave#wave4 {
   .nav-links .dropdown.active .dropdown-content {
     display: block;
   }
-} */
+}
