@@ -117,7 +117,8 @@
       </h1>
       <div class="contact-form">
         <h2>Contact Us</h2>
-        <form id="contactForm">
+        <form id="contactForm" data-web3forms="true">
+          <input type="hidden" name="access_key" value="ea9ab843-ad6e-4d2b-9899-7904b82fd3e0">
           <label for="firstName">First Name*</label>
           <input type="text" id="firstName" name="firstName" required />
 
@@ -135,8 +136,15 @@
 
           <label for="message">Message</label>
           <textarea id="message" name="message"></textarea>
+          <div class="terms-container">
+            <input type="checkbox" id="termsCheckbox" style="width: 10%;"/>
+            <label for="termsCheckbox" class="terms-text">
+              By clicking this, you accept our 
+              <a href="terms-and-conditions.html" target="_blank">terms and conditions</a>.
+            </label>
+          </div>
 
-          <button type="submit">Submit</button>
+          <button type="submit" id="submitBtn" disabled>Submit</button>
         </form>
       </div>
     </div><br><br><br><br><br><br>
@@ -148,27 +156,23 @@
         <div class="wave" id="wave4"></div>
       </div>
       <img
-        src="images/Catch-Up_Logo_CMYK_page-0001-removebg-preview.png"
+        src="images/logofoot1.png"
         alt=""
       />
       <ul class="social_icon">
         <li>
-          <a href="#" title="fb">
+          <a href="https://www.facebook.com/profile.php?id=100076148143972" title="fb">
             <ion-icon name="logo-facebook"></ion-icon>
           </a>
         </li>
+        
         <li>
-          <a href="#" title="x">
-            <ion-icon name="logo-xing"></ion-icon>
-          </a>
-        </li>
-        <li>
-          <a href="#" title="linkedin">
+          <a href="https://www.linkedin.com/in/catchup-bangalore-220349326/" title="linkedin">
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
         </li>
         <li>
-          <a href="#" title="instagram">
+          <a href="https://www.instagram.com/catchupbangalore/" title="instagram">
             <ion-icon name="logo-instagram"></ion-icon>
           </a>
         </li>
@@ -177,7 +181,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="events.html">Events</a></li>
-        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <p>@<span id="year"></span> All Rights Reserved Design by SUGAAM</p>
@@ -236,7 +240,24 @@
             return;
           }
 
-          alert("Form submitted successfully!");
+          const formData = new FormData(contactForm);
+        formData.append('phone', phone);  // Adding the formatted phone number to the form data
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Form submitted successfully!");
+            } else {
+                alert("Failed to submit form. Please try again later.");
+            }
+        })
+        .catch(error => {
+            alert("An error occurred while submitting the form. Please try again later.");
+        });
 
           // Form submission logic here
         });
@@ -254,6 +275,21 @@
           return re.test(String(email).toLowerCase());
         }
       });
+    </script>
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  const submitBtn = document.getElementById("submitBtn");
+  const termsCheckbox = document.getElementById("termsCheckbox");
+
+  // Initial check in case the page is reloaded with the checkbox already checked
+  submitBtn.disabled = !termsCheckbox.checked;
+
+  // Toggle submit button based on the checkbox state
+  termsCheckbox.addEventListener("change", function () {
+    submitBtn.disabled = !termsCheckbox.checked;
+  });
+});
+
     </script>
   </body>
 </html>

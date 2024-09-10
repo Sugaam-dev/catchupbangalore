@@ -77,3 +77,24 @@
         padding: 10px;
     }
 }
+.terms-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; /* Vertically center the checkbox and text */
+  }
+  
+  .terms-text {
+    color: grey;
+    font-size: 14px;
+    margin-left: 8px; /* Add some space between the checkbox and the text */
+  }
+  
+  .terms-text a {
+    text-decoration: underline;
+    color: inherit; /* Inherit grey color */
+  }
+  
+  #submitBtn:disabled {
+    background-color: #cccccc; /* Greyed out */
+    cursor: not-allowed;
+  }

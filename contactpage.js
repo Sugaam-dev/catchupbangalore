@@ -48,3 +48,17 @@ document.addEventListener('DOMContentLoaded', function () {
         return re.test(String(email).toLowerCase());
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const submitBtn = document.getElementById("submitBtn");
+    const termsCheckbox = document.getElementById("termsCheckbox");
+  
+    // Initial check in case the page is reloaded with the checkbox already checked
+    submitBtn.disabled = !termsCheckbox.checked;
+  
+    // Toggle submit button based on the checkbox state
+    termsCheckbox.addEventListener("change", function () {
+      submitBtn.disabled = !termsCheckbox.checked;
+    });
+  });
+  
+  
